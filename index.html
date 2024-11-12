@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <title>Wasm Add</title>
+</head>
+<body>
+    <script type="module">
+    import init, { add } from "./pkg/wasm_add.js";
+    init().then(() => {
+        const a = 7;
+        const b = 13;
+        const x = add(a, b);
+        document.body.textContent = `${a} + ${b} = ${x}`;
+    });
+    </script>
+</body>
+</html>
